@@ -1,0 +1,19 @@
+usecase-beta
+actor Admin("Administrateur")
+actor Auteur("Auteur")
+actor Visiteur("Visiteur")
+    Admin --> C1["Consulter les catégories"]
+    Admin --> C2["Ajouter une catégorie"]
+    Admin --> C3["Modifier une catégorie"]
+    Admin --> C4["Supprimer une catégorie"]
+    Admin --> C5["Créer un auteur"]
+    Admin --> C6["Valider un article"]
+    Admin --> C7["Publier un article"]
+
+    Auteur --> A1["Ajouter un article"]
+    Auteur --> A2["Modifier un article non publié"]
+    Auteur --> A3["Supprimer un article non publié"]
+    Auteur --> A4["Changer son profil"]
+    Auteur --> A5["Réinitialiser son mot de passe"]
+
+    Visiteur --> V1["Consulter les articles"]
