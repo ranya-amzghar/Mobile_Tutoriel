@@ -1,0 +1,9 @@
+flowchart LR
+    Admin("Admin")
+    Auteur("Auteur")
+    Visiteur("Visiteur")
+    System["Blog"]
+
+    Admin ---|"Gère le contenu"| System
+    Auteur ---|"Rédige et gère ses articles"| System
+    Visiteur ---|"Consulte les articles publiés"| System
