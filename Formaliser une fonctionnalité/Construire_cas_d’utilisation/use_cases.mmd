@@ -1,19 +1,33 @@
 usecase-beta
-actor Admin("Administrateur")
+direction LR
+actor Admin("Admin")
 actor Auteur("Auteur")
 actor Visiteur("Visiteur")
-    Admin --> C1["Consulter les catégories"]
-    Admin --> C2["Ajouter une catégorie"]
-    Admin --> C3["Modifier une catégorie"]
-    Admin --> C4["Supprimer une catégorie"]
-    Admin --> C5["Créer un auteur"]
-    Admin --> C6["Valider un article"]
-    Admin --> C7["Publier un article"]
-
-    Auteur --> A1["Ajouter un article"]
-    Auteur --> A2["Modifier un article non publié"]
-    Auteur --> A3["Supprimer un article non publié"]
-    Auteur --> A4["Changer son profil"]
-    Auteur --> A5["Réinitialiser son mot de passe"]
-
-    Visiteur --> V1["Consulter les articles"]
+systemBoundary "Order system"
+  Consulter("Consulter les catégories")
+  Ajouter("Ajouter une catégorie")
+  Modifier("Modifier une catégorie")
+  Supprimer("Supprimer une catégorie")
+  Creer("Créer un auteur")
+  Valider("Valider un article")
+  Publier("Publier un article")
+  Add("Ajouter un article")
+  Update("Modifier un article non publié")
+  Remove("Supprimer un article non publié")
+  Changer("Changer son profil")
+  Reinitialiser("Réinitialiser son mot de passe")
+  Consul("Consulter les articles")
+end
+Admin --> Consulter
+Admin --> Ajouter
+Admin --> Modifier
+Admin --> Supprimer
+Admin --> Creer
+Admin --> Valider
+Admin --> Publier
+Auteur --> Add
+Auteur --> Update
+Auteur --> Remove
+Auteur --> Changer
+Auteur --> Reinitialiser
+Visiteur --> Consul
