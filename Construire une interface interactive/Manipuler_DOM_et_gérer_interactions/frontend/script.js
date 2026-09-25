@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     let form = document.querySelector('#form');
     let nom = document.querySelector('#nom');
     let couleur = document.querySelector('#couleur');
-    let btnAdd = document.querySelector('#btnAdd');
     let btnCancel = document.querySelector('#btnCancel');
     let table = document.querySelector('#table');
     btnShow.addEventListener('click', ()=>{
