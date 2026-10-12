@@ -6,9 +6,11 @@ A GitHub Issue is a tool used to track tasks, bugs, or ideas in a project. It he
 
 - Milestone: A way to group Issues around a specific goal or deadline.
 
-- Label: A tag used to categorize Issues by type, such as bug, enhancement, or frontend.
+- Label: Tags used to categorize Issues.
 
 - Assignee: The person responsible for working on an Issue.
+
+- Checklist: A list of tasks to do and check when completed.
 
 ## Pratique:
 
