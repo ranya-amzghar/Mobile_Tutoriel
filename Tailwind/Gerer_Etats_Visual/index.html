@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog - Administration</title>
+    <!-- Intégration de Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Conteneur flex (colonne sur mobile, ligne sur PC) -->
+    <div class="flex flex-col md:flex-row min-h-screen">
+
+        <!-- Sidebar (cachée sur mobile, visible sur md) -->
+        <aside class="hidden md:block w-64 bg-slate-900 text-white p-6">
+            <h2 class="text-2xl font-bold mb-6">Mon Blog</h2>
+            <nav>
+                <a href="#" class="block py-2 px-4 bg-slate-800 rounded">Catégories</a>
+            </nav>
+        </aside>
+
+        <!-- Contenu principal -->
+        <main class="flex-1 p-4 md:p-8">
+            <h1 class="text-3xl font-bold mb-6">Gestion des Catégories</h1>
+
+            <!-- Formulaire (1 col mobile, 2 cols PC) -->
+            <form id="form-categorie" class="bg-white p-6 rounded shadow mb-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Vos inputs ici... -->
+                <div class="md:col-span-2 mt-4">
+                    <button type="submit" id="btn-submit-form" class="bg-blue-600 text-white px-4 py-2 rounded flex items-center gap-2 hover:bg-blue-700">
+                        <span id="spinner-submit" hidden>⏳</span>
+                        <span id="text-submit">Enregistrer</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Tableau responsive -->
+            <div class="overflow-x-auto bg-white p-6 rounded shadow">
+                <table class="w-full text-left border-collapse min-w-[600px]">
+                    <!-- En-têtes et tbody id="table-categories-body" -->
+                     <thead>
+                        <tr>
+                            <th class="py-2 px-4 border-b">Nom</th>
+                            <th class="py-2 px-4 border-b">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                    </tbody>
+                </table>
+            </div>
+            
+            <div id="toast-container" class="fixed bottom-4 right-4 flex flex-col gap-2"></div>
+        </main>
+
+    </div>
+
+    <!-- JS de l'application -->
+    <script src="script.js"></script>
+</body>
+</html>
